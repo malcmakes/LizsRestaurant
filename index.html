@@ -8,9 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- To Do List -->
-
+        <!-- To Do List -->
     <!-- RENAME sections and ORDER
 
     Create Slideshow/ Carosel for header IMGS 
@@ -22,52 +20,58 @@
     Create Hamburger Menu 
 
     Implement Media Queries for different Screen Sizes
-
 -->
-
-    <header>
-
+ <!---------------------------------------HEADER SECTION-------------------------------------------------->      
+    <header id="home">
         <ul>
             <img src="" alt="Liz's Cookhouse">
-
             <div class="nav-links">
-
-                <li>ABOUT</li>
-                <li>MENU</li>
-                <li>HOURS</li>
-                <li>EVENTS</li>
-
+                
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#events">EVENTS</a></li>
+                    <li><a href="#contact">CONTACT</a></li> 
             </div>
-
-
             <form>
                 <button class="favorite styled"
                 type="button">
             ORDER NOW
             </button>
             </form>
-
         </ul>
     </header>
+<!---------------------------------------HERO CAROUSEL SECTION-------------------------------------------------->       
+    <div class="carousel">
+        <button class="carousel__button carousel__button--left is-hidden">
+            <img src="./icons/icons8-u-turn-to-left-100.png" alt="">
+        </button>
+        <div class="carousel__track-container">
+            <ul class="carousel__track">
+                <li class="carousel__slide current-slide">
+                    <img class="carousel__image" src="./imgs/alex-haney-CAhjZmVk5H4-unsplash.jpg" alt="">    
+                </li>
+                <li class="carousel__slide">
+                    <img class="carousel__image" src="./imgs/quesadilla.jpg" alt="">
+                </li>
+                <li class="carousel__slide">
+                    <img class="carousel__image" src="./imgs/chickenstrips.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+        <button class="carousel__button carousel__button--right">
+            <img src="./icons/icons8-u-turn-to-right-100.png" alt="">
+        </button>
 
-    <section id="component-one">
-        
-        <div id="slider-box"></div>
-
-    </section>
-
-
-    <section id="component-three">
-
-        <!-- Moving Image Gallery with sliding animations -->
-
-    </section>
-
-
-    <section id="component-four">
-
+        <div class="carousel__nav">
+            <button class="carousel__indicator current-slide"></button>
+            <button class="carousel__indicator"></button>
+            <button class="carousel__indicator"></button>
+        </div>
+    </div>
+<!---------------------------------------MENU SECTION-------------------------------------------------->        
+<section class="menu-section" id="menu">
         <!-- Resturant Menu is displayed in this section -->
-
         <ul id="menuMain">
         <li>
             <h2>Fried Chicken</h2>
@@ -119,32 +123,24 @@
         </li>
           
         </ul>
-
     </section>
+<!---------------------------------------ABOUT SECTION-------------------------------------------------->
+    <section class= "about-section" id="about">
 
-  <section id="component-two">
-        <h2>Superior Breakfast Lunch and Dinner.</h2>
-        
-    </section>
-
-
-    <section id="component-two">
+        <h2 class="about-section-header">Superior Breakfast Lunch and Dinner.</h2>
 
         <h2>The Why of Liz's Cookhouse</h2>
 
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius delectus possimus consectetur fugiat, earum cum sunt commodi sit autem necessitatibus fugit error cupiditate tenetur blanditiis sequi, laboriosam voluptatibus! Similique, quas?</p>
 
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil distinctio voluptate et. Maxime quod nemo repudiandae officia obcaecati voluptate accusamus aliquid tenetur recusandae blanditiis, accusantium est nihil impedit voluptas. Voluptate!</p>
-        
 
     </section>
+<!---------------------------------------EVENTS SECTION-------------------------------------------------->    
+    <section class="events-section" id="events">
 
-    <section id="component-six">
-
-        <section class="sub-section-one">
-
-            <div id="sub-section-one-div">
-            
+        <section class="events-sub-section-one">
+            <div class="events-sub-section-one-div">
             <h2>Private Events</h2>
             <h2>Book your private Event at Liz's Cookhouse!</h2>
 
@@ -152,24 +148,18 @@
             type="button">
             Add to favorites
             </button>
-            </form>
-
+            
         </div>
-
         </section>
 
-        <section class="sub-section-two">
-            <img id="comp-six-img-one" src="./imgs/alex-haney-CAhjZmVk5H4-unsplash.jpg" alt="">
-
-
+        <section class="events-sub-section-two">
+            <img class="events-img-one" src="./imgs/pexels-rodnae-productions-6004754.jpg" alt="Two women toasting wine glasses.">
         </section>
-      
     </section>
+ <!---------------------------------------CONTACT SECTION-------------------------------------------------->     
+    <footer class="contact-section" id="contact">
 
-    <footer>
-
-
-        <section class="footer-sub-comp" id="sub-comp-1">
+        <section class="footer-sub-section">
             <h2>Starts from the mind made from the heart.</h2>
 
             <h3>Liz's Cookhouse </h3>
@@ -177,7 +167,7 @@
             <h3>1201 3rd Ave Seattle, WA, 98101 </h3>
         </section>
 
-        <section class="footer-sub-comp" id="sub-comp-2">
+        <section class="footer-sub-section">
             
             <h2>News Letter</h2>
 
@@ -187,19 +177,17 @@
             <input class="favorite styled"
             type="button"
             value="Submit">
-
-       
-
         </section>
 
-        <section class="footer-sub-comp" id="sub-comp-3">
+        <section class="footer-sub-section">
             <h2>Hours Of Operation</h2>
 
             <h3>Monday - Thursday 9 am - 9 pm </h3>
             <h3>Friday - Saturday 9 am - 11 pm </h3>
             <h3>Sunday - Closed </h3>
         </section>
-
     </footer>
+    <script src="./carousel.js"></script>
 </body>
+
 </html>
