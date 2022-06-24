@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liz's Cookhouse</title>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,800;1,300;1,600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,25 +27,28 @@
 
     Implement Media Queries for different Screen Sizes
 -->
- <!---------------------------------------HEADER SECTION-------------------------------------------------->      
+ <!---------------------------------------HEADER SECTION-------------------------------------------------->     
+  
     <header id="home">
-        <ul>
-            <img src="" alt="Liz's Cookhouse">
-            <div class="nav-links">
-                
-                    <li><a href="#home">HOME</a></li>
-                    <li><a href="#menu">MENU</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#events">EVENTS</a></li>
-                    <li><a href="#contact">CONTACT</a></li> 
-            </div>
-            <form>
-                <button class="favorite styled"
-                type="button">
-            ORDER NOW
-            </button>
-            </form>
-        </ul>
+        <div class="container">
+            <ul class="flexed-row">
+                <img src="" alt="Liz's Cookhouse">
+                <div class="nav-links flexed-row ">
+            
+                        <li><a href="#home">HOME</a></li>
+                        <li><a href="#menu">MENU</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#events">EVENTS</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                </div>
+                <form>
+                    <button class="favorite styled"
+                    type="button">
+                ORDER NOW
+                </button>
+                </form>
+            </ul>
+        </div>
     </header>
 <!---------------------------------------HERO CAROUSEL SECTION-------------------------------------------------->       
     <div class="carousel">
@@ -69,125 +78,143 @@
             <button class="carousel__indicator"></button>
         </div>
     </div>
-<!---------------------------------------MENU SECTION-------------------------------------------------->        
-<section class="menu-section" id="menu">
-        <!-- Resturant Menu is displayed in this section -->
-        <ul id="menuMain">
-        <li>
-            <h2>Fried Chicken</h2>
-            <h4>8</h4>
-        </li>
-        <li>
-            <h2>Mac & Cheese</h2>
-            <h4>8</h4>
-        </li>
-        <li>
-            <h2>Grilled Cheese Sandwich</h2>
-            <h4>8</h4>
-        </li>
-        <li>
-            <h2>Pizza</h2>
-            <h4>8</h4>
-        </li>
-        <li>
-            <h2>Fried Chicken</h2>
-            <h4>8</h4>
-        </li>
-        <li>
-            <h2>Fried Chicken</h2>
-            <h4>8</h4>
-        </li>
-        <li>
-            <h2>Fried Chicken</h2>
-            <h4>8</h4>
-        </li>
-        <li>
-            <h2>Fried Chicken</h2>
-            <h4>8</h4>
-        </li>
-        <li>
-            <h2>Fried Chicken</h2>
-            <h4>8</h4>
-        </li>
-        <li>
-            <h2>Fried Chicken</h2>
-            <h4>8</h4>
-        </li>
-        <li>
-            <h2>Fried Chicken</h2>
-            <h4>8</h4>
-        </li>
-        <li>
-            <h2>Fried Chicken</h2>
-            <h4>8</h4>
-        </li>
-          
-        </ul>
+<!---------------------------------------MENU SECTION-------------------------------------------------->   
+<!-- Resturant Menu is displayed in this section -->     
+<section class="menu-section text-center" id="menu">
+        <div class=" text-center">
+            <ul class="menuMain ">
+            <li>
+                <h3>Steak</h3>
+                <h4>8</h4>
+            </li>
+            <li>
+               <h3>Fried Chicken</h3>
+                <h4>8</h4>
+            </li>
+            <li>
+                <h3>Burger</h3>
+                <h4>8</h4>
+            </li>
+            <li>
+                <h3>Nachos</h3>
+                <h4>8</h4>
+            </li>
+            <li>
+                <h3>Veggie Wrap</h3>
+                <h4>8</h4>
+            </li>
+            <li>
+                <h3>Chicken Sandwich</h3>
+                <h4>8</h4>
+            </li>
+            <li>
+                <h3>Quesidilla</h3>
+                <h4>8</h4>
+            </li>
+            <li>
+                <h3>Mac & Cheese</h3>
+                <h4>8</h4>
+            </li>
+            <li>
+                <h3>Torta</h3>
+                <h4>8</h4>
+            </li>
+            <li>
+                <h3>Chicken & Waffle</h3>
+                <h4>8</h4>
+            </li>
+            <li>
+                <h3>Brussel Sprout</h3>
+                <h4>8</h4>
+            </li>
+            <li>
+                <h3>Philly Cheesesteak</h3>
+                <h4>8</h4>
+            </li>
+            </ul>
+        </div>
     </section>
 <!---------------------------------------ABOUT SECTION-------------------------------------------------->
     <section class= "about-section" id="about">
 
-        <h2 class="about-section-header">Superior Breakfast Lunch and Dinner.</h2>
-
-        <h2>The Why of Liz's Cookhouse</h2>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius delectus possimus consectetur fugiat, earum cum sunt commodi sit autem necessitatibus fugit error cupiditate tenetur blanditiis sequi, laboriosam voluptatibus! Similique, quas?</p>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil distinctio voluptate et. Maxime quod nemo repudiandae officia obcaecati voluptate accusamus aliquid tenetur recusandae blanditiis, accusantium est nihil impedit voluptas. Voluptate!</p>
+        <div class="container margin-inline-temp-solution ">
+            <h1 class="about-section-header text-center">Supreme Breakfast Lunch and Dinner.</h1>
+            <h2 class="text-center">The Why of Liz's Cookhouse</h2>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius delectus possimus consectetur fugiat, earum cum sunt commodi sit autem necessitatibus fugit error cupiditate tenetur blanditiis sequi, laboriosam voluptatibus! Similique, quas?</p>
+            <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil distinctio voluptate et. Maxime quod nemo repudiandae officia obcaecati voluptate accusamus aliquid tenetur recusandae blanditiis, accusantium est nihil impedit voluptas. Voluptate!</p>
+        </div>
 
     </section>
 <!---------------------------------------EVENTS SECTION-------------------------------------------------->    
     <section class="events-section" id="events">
-
-        <section class="events-sub-section-one">
-            <div class="events-sub-section-one-div">
-            <h2>Private Events</h2>
-            <h2>Book your private Event at Liz's Cookhouse!</h2>
-
-            <button class="favorite styled"
-            type="button">
-            Add to favorites
-            </button>
+        
+        <section class="bg-dark">
+            <div class="container ">
             
-        </div>
+                <div class="split ">
+                    <div>
+                        <h2 class="text-center">Private Events</h2>
+                        <h2 class="text-center">Book your private Event at Liz's Cookhouse!</h2>
+                        <button class="favorite styled" type="button">Add to favorites</button> 
+                    </div>
+                    <div>
+                        <img class="events-img-one body-img" src="./imgs/pexels-rodnae-productions-6004754.jpg" alt="Two women toasting wine glasses.">
+                    </div>
+                </div>
+            </div>
         </section>
-
-        <section class="events-sub-section-two">
-            <img class="events-img-one" src="./imgs/pexels-rodnae-productions-6004754.jpg" alt="Two women toasting wine glasses.">
-        </section>
+        
     </section>
  <!---------------------------------------CONTACT SECTION-------------------------------------------------->     
     <footer class="contact-section" id="contact">
+        <div class="container margin-inline-temp-solution ">
+            <div class="split">
 
-        <section class="footer-sub-section">
-            <h2>Starts from the mind made from the heart.</h2>
+                <div>
+                    <h2 class="text-center">Liz's Cookhouse </h2>
+                    <h2 class="text-center">253-243-7000</h2>
+                    <h4 class="text-center">1201 3rd Ave Seattle, WA, 98101 </h4>  
+                </div>
 
-            <h3>Liz's Cookhouse </h3>
-            <h3>253-243-7000</h3>
-            <h3>1201 3rd Ave Seattle, WA, 98101 </h3>
-        </section>
+                <div>
+                    <h2 class="text-center">Hours Of Operation</h2>
+                    <h3 class="text-center">Monday - Thursday <br>
+                         9 am - 9 pm </h3>
 
-        <section class="footer-sub-section">
-            
-            <h2>News Letter</h2>
+                    <h3 class="text-center">Friday - Saturday <br>
+                         9 am - 11 pm </h3>
+                    <h3 class="text-center">Sunday - Closed </h3>
+                </div>
 
-            <input type="text" id="name" name="name" required
-            minlength="4" maxlength="8" size="10" placeholder="Email Adress">
+                <div>
+                    <h2 class="text-center">News Letter</h2>
 
-            <input class="favorite styled"
-            type="button"
-            value="Submit">
-        </section>
+                    <input class="text-center" type="text" id="name" name="name" required
+                    minlength="4" maxlength="8" size="10" placeholder="Email Adress">
+                    <input class="favorite styled" type="button" value="Submit">
 
-        <section class="footer-sub-section">
-            <h2>Hours Of Operation</h2>
+                    <h3 class="text-center">Keep up to date today :)</h3>
+                </div>
 
-            <h3>Monday - Thursday 9 am - 9 pm </h3>
-            <h3>Friday - Saturday 9 am - 11 pm </h3>
-            <h3>Sunday - Closed </h3>
-        </section>
+
+            </div>
+
+ 
+         
     </footer>
+        </div>
     <script src="./carousel.js"></script>
 </body>
 
 </html>
+
+
+
+<!-- 
+                <h2>Starts from the mind made from the heart.</h2>
+                
+           
+         
+    
+        
+                

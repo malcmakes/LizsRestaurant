@@ -1,76 +1,147 @@
 /*-----------------------------------------HEADER STYLE---------------------------------------*/
+:root {
+    
+    --ff-primary: 'Open Sans', sans-serif;
+    /* --ff-accent: 'Playfair Display', serif; */
+}
+
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border;
+
+    text-decoration: none;
+}
+
+body{
+    font-family: var(--ff-primary);
+    font-weight: 400px;
+    font-size: 1.3125rem;
+    line-height: 1.6;
+}
+
+body, h1, h2, h3, p {
+    margin: 0;
+}
+
+h2, h3, p {
+    margin-bottom: 1em;
+}
+
 header {
-    height: 130px;
-    background-color: rgb(248, 193, 131);
+    background-color: rgb(251, 201, 110);
+    padding: 1em 0;  
 }
-img {
-    opacity: 0.7;
-}
-ul {
-    padding: 70px 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-li {
-    list-style: none;
-}
-a {
+ .flexed-row {
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
-}
-.nav-links {
-    display: flex;
+    align-items: center;
     flex-direction: row;
-    justify-content: space-around;
+   
 }
-.menu-section > ul {
+
+.nav-links li {
+    padding: 0 1em;
+    list-style: none;
+}
+.container {
+    width: min(90%, 70.5rem);
+}
+
+/* .margin-inline-temp-solution {
+    margin-inline: auto;
+} */
+
+header, section {
+    padding: 3rem 0;
+}
+
+
+
+
+.text-center {
+    text-align: center;
+}
+
+/* Default img Setting */
+.body-img {
+    max-width: 100%;
+
+   
+
+ 
+  
+}
+
+ .menuMain  {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-content: space-evenly;
-    justify-items: center;
-    align-content: space-evenly;
-    align-items: center;
-    text-align: center;
+    margin: auto;
+    list-style: none;
 }
-.about-section {
-    text-align: center;
-}
-.events-section {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-}
-.events-sub-section-one {
-    text-align: center;
-    width: 50%;
-    background-color: rgb(200, 222, 248);
-    padding: 100px 100px;
-}
-.events-sub-section-one-div {
-    background-color: rgb(254, 249, 223);
-}
-.events-sub-section-two {
-    width: 50%;
-    display: flex;
-}
-.events-img-one {
-    height: 400px;
-}
-footer {
-    height: 500px;
-    background-color: rgb(248, 193, 131);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.footer-sub-section {
 
-    width: 33.33%;
+.about-section-header {
+    padding: 3rem 0;
+
 }
+
+.split {
+    display: flex;
+    flex-direction: row;
+    
+  }
+
+  .split > * {
+    flex-basis: 100%;
+  }
+  .split > * + * {
+    margin-left: 2em;
+  }
+
+
+
+/* Activate when BELOW 25em or 400px....  */
+@media(max-width: 25em) {
+    .body-img {
+        border: red solid 2px;
+        /* display: block; */
+
+       
+
+        max-width: 100%;
+    }
+    .menuMain   {
+        display: block;
+        margin: auto;
+        padding: 0;
+
+        color: blue;
+      }
+      .split {
+        flex-direction: column;
+    }
+
+   
+    
+}
+
+
+
+
+
+
+.events-section {
+    background-color: rgb(213, 213, 255);
+}
+
+
+
+.contact-section {
+    background-color: rgb(251, 201, 110);
+}
+
 /*-----------------------------------------CAROUSEL STYLE---------------------------------------*/
 .carousel {
     position: relative;
