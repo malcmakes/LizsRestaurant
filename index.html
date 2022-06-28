@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liz's Cookhouse</title>
 
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,800;1,300;1,600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+        <script src="./main.js" defer></script>
+    
 </head>
 <body>
+
+    <div class="texture"></div>
         <!-- To Do List -->
     <!-- RENAME sections and ORDER
 
@@ -29,60 +32,84 @@
 -->
  <!---------------------------------------HEADER SECTION-------------------------------------------------->     
   
-    <header id="home">
-        <div class="container">
-            <ul class="flexed-row">
-                <img src="" alt="Liz's Cookhouse">
-                <div class="nav-links flexed-row ">
-            
-                        <li><a href="#home">HOME</a></li>
-                        <li><a href="#menu">MENU</a></li>
-                        <li><a href="#about">ABOUT</a></li>
-                        <li><a href="#events">EVENTS</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
-                </div>
-                <form>
-                    <button class="favorite styled"
-                    type="button">
-                ORDER NOW
-                </button>
-                </form>
-            </ul>
-        </div>
+ <section class="showcase ">
+    <header>
+        <!-- <img id="logo-img" src="#" alt="logo"> -->
+        <h2>Liz's Cookhouse</h2>
+        <div class="toggle "></div>
     </header>
-<!---------------------------------------HERO CAROUSEL SECTION-------------------------------------------------->       
-    <div class="carousel">
-        <button class="carousel__button carousel__button--left is-hidden">
-            <img src="./icons/icons8-u-turn-to-left-100.png" alt="">
-        </button>
-        <div class="carousel__track-container">
-            <ul class="carousel__track">
-                <li class="carousel__slide current-slide">
-                    <img class="carousel__image" src="./imgs/alex-haney-CAhjZmVk5H4-unsplash.jpg" alt="">    
-                </li>
-                <li class="carousel__slide">
-                    <img class="carousel__image" src="./imgs/quesadilla.jpg" alt="">
-                </li>
-                <li class="carousel__slide">
-                    <img class="carousel__image" src="./imgs/chickenstrips.jpg" alt="">
-                </li>
-            </ul>
-        </div>
-        <button class="carousel__button carousel__button--right">
-            <img src="./icons/icons8-u-turn-to-right-100.png" alt="">
-        </button>
 
-        <div class="carousel__nav">
-            <button class="carousel__indicator current-slide"></button>
-            <button class="carousel__indicator"></button>
-            <button class="carousel__indicator"></button>
+</section>
+    
+<!-- 
+    <video src="./video.mp4" muted loop autoplay></video>
+
+    <div class="overlay"></div> -->
+
+    <!-- <div class="text">
+        <h2>Never Stop</h2>
+    <h3>Exploring The World</h3>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque aspernatur enim, dignissimos odio dolore velit dolorum repellendus est minus nulla reprehenderit sapiente facilis blanditiis possimus molestiae non eum cupiditate dolor.</p>
+    <a href="#">Explore</a>
+    </div> -->
+    
+    <!-- <ul class="social">
+        <li><img src="facebook.png" alt=""></li>
+        <li><img src="twitter.png" alt=""></li>
+        <li><img src="instagram.png" alt=""></li>
+    </ul> -->
+
+
+
+    <div class="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+
+<!---------------------------------------HERO CAROUSEL SECTION-------------------------------------------------->       
+    <div class="caro-container">
+        <div class="carousel">
+            <button class="carousel__button carousel__button--left is-hidden">
+                <img src="./icons/icons8-u-turn-to-left-100.png" alt="">
+            </button>
+            <div class="carousel__track-container">
+                <ul class="carousel__track">
+                    <li class="carousel__slide current-slide">
+                        <img class="carousel__image img-filter" src="./imgs/alex-haney-CAhjZmVk5H4-unsplash.jpg" alt="">
+                    </li>
+                    <li class="carousel__slide">
+                        <img class="carousel__image img-filter" src="./imgs/quesadilla.jpg" alt="">
+                    </li>
+                    <li class="carousel__slide">
+                        <img class="carousel__image img-filter" src="./imgs/chickenstrips.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+            <button class="carousel__button carousel__button--right">
+                <img src="./icons/icons8-u-turn-to-right-100.png" alt="">
+                
+            </button>
+            <div class="carousel__nav">
+                <button class="carousel__indicator current-slide"></button>
+                <button class="carousel__indicator"></button>
+                <button class="carousel__indicator"></button>
+            </div>
         </div>
     </div>
 <!---------------------------------------MENU SECTION-------------------------------------------------->   
 <!-- Resturant Menu is displayed in this section -->     
-<section class="menu-section text-center" id="menu">
-        <div class=" text-center">
-            <ul class="menuMain ">
+<section class="food-menu-section text-center" id="menu">
+        <div class=" container text-center">
+
+            <h1>Specialties</h1>
+            
+            <ul class="FoodMenuMain ">
             <li>
                 <h3>Steak</h3>
                 <h4>8</h4>
@@ -149,25 +176,28 @@
     <section class="events-section" id="events">
         
         <section class="bg-dark">
-            <div class="container ">
+            <div class="container container-margin">
             
-                <div class="split ">
+                <div class="split">
                     <div>
-                        <h2 class="text-center">Private Events</h2>
+                        <h3 class="text-center">Private Events</h3>
                         <h2 class="text-center">Book your private Event at Liz's Cookhouse!</h2>
-                        <button class="favorite styled" type="button">Add to favorites</button> 
+                        <button class="favorite styled signUp-btn " type="button">Sign Up</button> 
                     </div>
                     <div>
-                        <img class="events-img-one body-img" src="./imgs/pexels-rodnae-productions-6004754.jpg" alt="Two women toasting wine glasses.">
+                        <img class="events-img-one body-img img-filter " src="./imgs/pexels-rodnae-productions-6004754.jpg" alt="Two women toasting wine glasses.">
                     </div>
                 </div>
-            </div>
+
+            
+            
         </section>
+        
         
     </section>
  <!---------------------------------------CONTACT SECTION-------------------------------------------------->     
     <footer class="contact-section" id="contact">
-        <div class="container margin-inline-temp-solution ">
+        <div class="container  ">
             <div class="split">
 
                 <div>
@@ -191,30 +221,20 @@
 
                     <input class="text-center" type="text" id="name" name="name" required
                     minlength="4" maxlength="8" size="10" placeholder="Email Adress">
-                    <input class="favorite styled" type="button" value="Submit">
+                    <input class="signUp-btn" type="button" value="Submit">
 
                     <h3 class="text-center">Keep up to date today :)</h3>
                 </div>
 
-
             </div>
-
- 
-         
     </footer>
         </div>
-    <script src="./carousel.js"></script>
+
 </body>
 
 </html>
 
 
 
-<!-- 
-                <h2>Starts from the mind made from the heart.</h2>
-                
-           
-         
-    
         
                 

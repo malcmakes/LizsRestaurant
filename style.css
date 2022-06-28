@@ -3,160 +3,300 @@
     
     --ff-primary: 'Open Sans', sans-serif;
     /* --ff-accent: 'Playfair Display', serif; */
+    --overlay-color : white;
 }
 
-
-
-*,
-*::before,
-*::after {
+* {
     box-sizing: border;
-
     text-decoration: none;
+
+ 
 }
 
-body{
-    font-family: var(--ff-primary);
-    font-weight: 400px;
+body {
     font-size: 1.3125rem;
-    line-height: 1.6;
+    font-family: var(--ff-primary);
+    background-image: url(./imgs/website-texture-01.png);
+    
 }
 
-body, h1, h2, h3, p {
-    margin: 0;
-}
+/* -------------------------SHOWCASE------------------------------------- */
 
-h2, h3, p {
-    margin-bottom: 1em;
-}
-
-header {
-    background-color: rgb(251, 201, 110);
-    padding: 1em 0;  
-}
- .flexed-row {
+.showcase {
+    top: 0;
+    position: fixed;
+    right: 0;
+    width: 100%;
+    min-height: 30vh;
+  
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
-   
+
+
+    color: rgb(255, 255, 255);
+    z-index: 2;
+
+    transition: 0.7s;
+  
 }
 
-.nav-links li {
-    padding: 0 1em;
+.showcase.active {
+    right: 300px;
+}
+
+.showcase header {
+    position: absolute;
+    top: 0;
+    
+    left: 0;
+    width: 100%;
+    
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.container {
+    padding: 2em 0;
+}
+
+.logo{
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url('./icons/menu.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+    filter: invert(1);
+
+}
+
+.toggle.activate {
+
+    position: relative;
+    right: 0;
+    width: 60px;
+    height: 60px;
+   
+    background: url('./icons/close.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+    border: red solid 5px;
+    filter: invert(1);
+}
+
+.menu {
+    display: none;
+}
+
+
+.menu.active {
+    top: 0;
+    z-index: 200;
+   display: flex;
+   position:fixed;
+
+    /* background-color: rgb(213, 213, 252); */
+    background: linear-gradient(360deg,rgb(250, 238, 217),rgb(126, 126, 243));
+    right: 0;
+    width: 300px;
+
+    
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu ul {
+    position: relative;
     list-style: none;
 }
-.container {
-    width: min(90%, 70.5rem);
+
+.menu ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #111; 
 }
 
-/* .margin-inline-temp-solution {
-    margin-inline: auto;
-} */
-
-header, section {
-    padding: 3rem 0;
+.menu ul li a:hover {
+    background-color: var(--overlay-color);
 }
 
+/* -------------------------------------------------------------- */
 
+header {
+  background: linear-gradient(180deg,rgb(250, 238, 217),rgb(126, 126, 243));
+    padding: 1em 0;
 
+}
+
+section {
+    
+    padding: 3em 0;
+}
+
+.caro-container {
+    padding: 5em 0;
+}
 
 .text-center {
     text-align: center;
 }
 
-/* Default img Setting */
-.body-img {
-    max-width: 100%;
-
-   
-
- 
-  
-}
-
- .menuMain  {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: auto;
-    list-style: none;
-}
-
-.about-section-header {
-    padding: 3rem 0;
-
-}
-
 .split {
     display: flex;
     flex-direction: row;
-    
-  }
+}
 
-  .split > * {
+.split > * {
     flex-basis: 100%;
-  }
-  .split > * + * {
+}
+
+.split > * + * {
     margin-left: 2em;
-  }
+}
 
+.food-menu-section  {
+  
+    background: rgb(255, 218, 150);
+    
+    border: white solid 2
+    color: white;
 
+    margin: 0 3em;  
+}
 
-/* Activate when BELOW 25em or 400px....  */
-@media(max-width: 25em) {
-    .body-img {
-        border: red solid 2px;
-        /* display: block; */
+.FoodMenuMain   {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    padding: 0 ;
+    list-style: none;
 
-       
+}
 
-        max-width: 100%;
-    }
-    .menuMain   {
-        display: block;
-        margin: auto;
-        padding: 0;
+.events-section {
+    background-color: rgb(213, 213, 252);
+    
+}
 
-        color: blue;
-      }
-      .split {
-        flex-direction: column;
-    }
+.body-img {
+    max-width: 50%; 
+}
 
+.img-filter {
+    opacity: 0.8;
+}
+
+.signUp-btn {
+    display: block;
+    margin: auto;
+    height: 4em;
+    width: 12em;
    
     
 }
 
+input {
+    display: block;
+    margin: 2em auto;
+    
+}
 
+@media(max-width: 25em) {
 
+    .bg-dark{
+     display: block;
+     margin: auto;
+     padding: 0;
+     
+    }
 
+    .body-img {
+        max-width: 100%; 
+    }
+   
+    .menuMain {
+        display: block;
+        margin: auto;
+        padding: 0;
+        
+        
+    }
+    .split {
+        flex-direction: column;
+    }
 
+    .split > * + * {
+       
 
-.events-section {
-    background-color: rgb(213, 213, 255);
+        margin: 2em 0;
+    }
+
+    .signUp-btn {
+        
+        display: block;
+        margin: auto;  
+    }
+
+    input {
+        display: block;
+        margin: 2em auto;
+        
+    }
+ 
 }
 
 
-
-.contact-section {
-    background-color: rgb(251, 201, 110);
-}
 
 /*-----------------------------------------CAROUSEL STYLE---------------------------------------*/
+/* .caro-container {
+    background-color: rgb(172, 186, 246);
+} */
+
 .carousel {
+  
+    margin-top: 2em;
     position: relative;
     height: 600px;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
+
+
+@media(max-width: 375px){
+    .carousel{
+        height: 350px;
+    }
+    .food-menu-section  {
+      
+        margin: 0;     
+    }
+} 
+
+
 .carousel__image {
+   
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    
+    object-fit:cover;
 }
 
 .carousel__track-container {
-    /* background-color: lightgreen; */
+
     height: 100%;
     position: relative;
 
@@ -181,22 +321,25 @@ header, section {
 }
 
 .carousel__button {
-    position: absolute;
+    z-index: 1000;
+    position: fixed;
     top: 50%;
     
     transform: translateY(-50%);
     background: transparent;
-    border: 0;
+    border: red;
     cursor: pointer;
 }
 .carousel__button--left {
+    z-index: 150;
     left: -40px; 
 }
 .carousel__button--right {
+    z-index: 150;
     right: -40px; 
 }
 .carousel__nav {
-    /* background-color: pink; */
+   
     display: flex;
     justify-content: center;
     padding: 10px 0;
@@ -218,7 +361,3 @@ header, section {
     width: 25px;
 }
 .is-hidden {display: none; }
-
-
-
-
